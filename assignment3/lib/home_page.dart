@@ -1,62 +1,84 @@
 import 'package:flutter/material.dart';
 
-class Home_Page extends StatelessWidget {
-  const Home_Page({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("HomePage"),
-        backgroundColor: const Color.fromARGB(255, 172, 172, 227),
-        foregroundColor: const Color.fromARGB(255, 1, 1, 81),
+
+        backgroundColor: Color.fromARGB(210, 114, 61, 95),
+        foregroundColor: const Color.fromARGB(255, 230, 225, 225),
         leading: Icon(Icons.home),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Text(
-              "Hello Everyone",
-              style: TextStyle(
-                color: const Color.fromARGB(255, 9, 71, 79),
-                fontSize: 30,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                "Hello 63E",
+                style: TextStyle(color: Colors.cyan, fontSize: 30),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              "Welcome to my page",
-              style: TextStyle(
-                color: const Color.fromARGB(255, 18, 45, 49),
-                backgroundColor: const Color.fromARGB(255, 172, 172, 227),
-                fontSize: 20,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                "Welcome to our class",
+                style: TextStyle(color: Colors.cyan, fontSize: 20),
               ),
             ),
-          ),
+            SizedBox(
+              height: 200,
+              width: 200,
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusGeometry.circular(50),
+                ),
+                color: Colors.amber,
+                child: Center(
+                  child: Image.asset(
+                    "assets/images/Flutter.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Image.network(
+              "https://i.pinimg.com/736x/2d/95/e5/2d95e5886fc4c65a6778b5fee94a7d59.jpg",
+              height: 200,
+              width: 300,
+            ),
 
-          Container(
-            width: 300,
-            height: 400,
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(color: Colors.blueGrey),
-            child: Text("63_E section"),
-          ),
-        ],
+            Container(
+              width: 300,
+              height: 400,
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey,
+                border: Border.all(color: Colors.deepPurpleAccent, width: 5),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              child: Text("I am container!!!"),
+              alignment: Alignment.center,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color.fromARGB(255, 241, 20, 20),
-        foregroundColor: const Color.fromARGB(255, 196, 164, 164),
+        backgroundColor: Colors.blueGrey,
+        foregroundColor: Colors.white,
         onPressed: () {},
-        child: Icon(Icons.access_alarm_outlined),
+        child: Icon(Icons.add),
       ),
       endDrawer: NavigationDrawer(
         children: [
           ListTile(
             leading: Icon(Icons.home),
-            title: Text("Home"),
+            title: Text("HomePage"),
             onTap: () {},
           ),
           ListTile(
@@ -67,11 +89,6 @@ class Home_Page extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.person),
             title: Text("ProfilePage"),
-            onTap: () {},
-          ),
-          ListTile(
-            leading: Icon(Icons.local_activity),
-            title: Text("Activity"),
             onTap: () {},
           ),
         ],

@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
         title: Text("HomePage"),
 
         backgroundColor: Color.fromARGB(210, 114, 61, 95),
-        foregroundColor: const Color.fromARGB(255, 230, 225, 225),
+        foregroundColor: const Color.fromARGB(255, 128, 16, 16),
         leading: Icon(Icons.home),
       ),
       body: SingleChildScrollView(
@@ -40,14 +40,14 @@ class HomePage extends StatelessWidget {
                 color: Colors.amber,
                 child: Center(
                   child: Image.asset(
-                    "assets/images/Flutter.jpg",
+                    "assets/images/images.jpeg",
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
             Image.network(
-              "https://i.pinimg.com/736x/2d/95/e5/2d95e5886fc4c65a6778b5fee94a7d59.jpg",
+              "https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp",
               height: 200,
               width: 300,
             ),
@@ -62,8 +62,8 @@ class HomePage extends StatelessWidget {
                 border: Border.all(color: Colors.deepPurpleAccent, width: 5),
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
-              child: Text("I am container!!!"),
               alignment: Alignment.center,
+              child: Text("I am container!!!"),
             ),
           ],
         ),
